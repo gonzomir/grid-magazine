@@ -258,6 +258,18 @@ th {
 }
 
 /*--------------------------------------------------------------
+# Variables
+--------------------------------------------------------------*/
+:root {
+	--main-text-colour: #222;
+	--main-background-colour: #fefefe;
+	--primary-colour: #940000;
+	--secondary-colour: #BE0000;
+	--tertiary-colour: #F00303;
+	--accessory-colour: #555555;
+}
+
+/*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
 body,
@@ -265,7 +277,7 @@ button,
 input,
 select,
 textarea {
-	color: #404040;
+	color: var(--main-text-colour);
 	font-family: 'Fira Sans', 'Open Sans', 'Arial Nova', 'Helvetica Neu', 'Arial', 'Helvetica', sans-serif;
 	font-size: 100%;
 	font-weight: 300;
@@ -443,7 +455,7 @@ big {
 --------------------------------------------------------------*/
 html {
 	box-sizing: border-box;
-	color: #222;
+	color: var(--main-text-colour);
 	background-color: #fefefe;
 }
 
@@ -497,7 +509,7 @@ q {
 }
 
 hr {
-	background-color: #ccc;
+	background-color: var(--accessory-colour);
 	border: 0;
 	height: 1px;
 	margin-bottom: 1.5em;
@@ -561,33 +573,38 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	border: 1px solid;
-	border-color: #ccc #ccc #bbb;
+	border-color: var(--primary-colour);
 	border-radius: 3px;
-	background: #e6e6e6;
-	color: rgba(0, 0, 0, .8);
-	font-size: 12px;
-	font-size: 0.75rem;
+	background: var(--primary-colour);
+	color: rgba(255, 255, 255, .8);
+	font-size: 1.25em;
 	line-height: 1;
-	padding: .6em 1em .4em;
-}
-
-button:hover,
-input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover {
-	border-color: #ccc #bbb #aaa;
+	padding: .5em 1em .5em;
 }
 
 button:focus,
 input[type="button"]:focus,
 input[type="reset"]:focus,
 input[type="submit"]:focus,
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
 button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-	border-color: #aaa #bbb #bbb;
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, .25) 0%, rgba(0, 0, 0, 0) 100%);
 }
+
+input[type="reset"] {
+	background: var(--main-background-colour);
+	color: var(--primary-colour);
+}
+
 
 input[type="text"],
 input[type="email"],
@@ -605,14 +622,16 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	color: #666;
-	border: 1px solid #ccc;
+	color: inherit;
+	border: 1px solid;
+	border-color: currentColor;
 	border-radius: 3px;
-	padding: 3px;
+	padding: .25em .5em;
 }
 
 select {
-	border: 1px solid #ccc;
+	border: 1px solid;
+	border-color: currentColor;
 }
 
 input[type="text"]:focus,
@@ -631,7 +650,7 @@ input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus {
-	color: #111;
+	border-color: var(--primary-colour);
 }
 
 textarea {
@@ -645,17 +664,18 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
+	color: var(--primary-colour);
+	text-decoration: none;
 }
 
 a:visited {
-	color: purple;
+	color: var(--secondary-colour);
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: midnightblue;
+	text-decoration: underline;
 }
 
 a:focus {
@@ -803,11 +823,11 @@ h1 a:visited, h2 a:visited, h3 a:visited {
 }
 
 .screen-reader-text:focus {
-	background-color: #f1f1f1;
+	background-color: var(--accessory-colour);
 	border-radius: 3px;
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 	clip: auto !important;
-	color: #21759b;
+	color: var(--primary-colour);
 	display: block;
 	font-size: 14px;
 	font-size: 0.875rem;
