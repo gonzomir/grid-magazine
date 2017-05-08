@@ -120,3 +120,16 @@ function grid_mag_category_transient_flusher() {
 }
 add_action( 'edit_category', 'grid_mag_category_transient_flusher' );
 add_action( 'save_post',     'grid_mag_category_transient_flusher' );
+
+
+function grid_mag_short_excerpt() {
+	return 15;
+}
+
+function grid_mag_excerpt_length() {
+	if ( is_home() && is_front_page() ) {
+		add_filter( 'excerpt_length', 'grid_mag_short_excerpt', 999 );
+		add_filter( 'get_the_excerpt', 'wp_trim_words', 999);
+	}
+}
+add_action( 'parse_query', 'grid_mag_excerpt_length' );
