@@ -699,10 +699,7 @@ h1 a:visited, h2 a:visited, h3 a:visited {
 ## Menus
 --------------------------------------------------------------*/
 .main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
+	margin-bottom: 2.75em;
 }
 
 .main-navigation ul {
@@ -713,7 +710,6 @@ h1 a:visited, h2 a:visited, h3 a:visited {
 }
 
 .main-navigation li {
-	float: left;
 	position: relative;
 }
 
@@ -772,6 +768,19 @@ h1 a:visited, h2 a:visited, h3 a:visited {
 .main-navigation .current-menu-ancestor > a {
 }
 
+.menu-toggle {
+	background-color: transparent;
+	color: var(--primary-colour);
+	border-color: currentColor;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus,
+.menu-toggle:active {
+	color: var(--secondary-colour);
+	background-image: none;
+}
+
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
@@ -782,8 +791,10 @@ h1 a:visited, h2 a:visited, h3 a:visited {
 	.menu-toggle {
 		display: none;
 	}
-	.main-navigation ul {
+	.main-navigation ul.nav-menu {
 		display: block;
+		display: flex;
+		flex-flow: row wrap;
 	}
 }
 
@@ -878,8 +889,6 @@ h1 a:visited, h2 a:visited, h3 a:visited {
 .entry-content:after,
 .comment-content:before,
 .comment-content:after,
-.site-header:before,
-.site-header:after,
 .site-content:before,
 .site-content:after,
 .site-footer:before,
@@ -892,7 +901,6 @@ h1 a:visited, h2 a:visited, h3 a:visited {
 .clear:after,
 .entry-content:after,
 .comment-content:after,
-.site-header:after,
 .site-content:after,
 .site-footer:after {
 	clear: both;
@@ -1066,6 +1074,21 @@ object {
 ## Site branding
 --------------------------------------------------------------*/
 
+header[role="banner"] {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin: 0 -1em;
+  padding: .25em 1em;
+}
+
+header[role="banner"] * {
+  color: inherit;
+  text-decoration: none;
+}
+
 header[role="banner"] .site-title {
   margin: 0;
   padding: 0;
@@ -1074,6 +1097,10 @@ header[role="banner"] .site-title {
   font-size: 4.25em;
   line-height: 1.0588235294117647em;
   text-transform: uppercase;
+}
+
+header[role="banner"] p {
+  margin-bottom: 1em;
 }
 
 header[role="banner"] .site-title a {
