@@ -26,6 +26,12 @@
 		endif; ?>
 	</header><!-- .entry-header -->
 
+	<?php if ( has_post_thumbnail() ) : ?>
+	<a class="post-thumbnail" href="<?php the_permalink(); ?>">
+		<?php the_post_thumbnail( 'gridmag-image-big' ); ?>
+	</a>
+	<?php endif; ?>
+
 	<div class="entry-content">
 		<?php
 			if ( is_single() ) {

@@ -67,6 +67,24 @@ function grid_mag_setup() {
 
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
+
+  // Add new custom image size, so later you could call it in the theme.
+  add_image_size( 'gridmag-image-large', 1680, 945, true ); // 16/9
+  add_image_size( 'gridmag-image-big', 960, 540, true ); // 16/6
+  add_image_size( 'gridmag-image-medium', 640, 360, true ); // 16/9
+  add_image_size( 'gridmag-image-small', 360, 202, true ); // 16/9
+  add_image_size( 'gridmag-image-tiny', 280, 158, true ); // 16/9
+
+  add_image_size( 'gridmag-wide-large', 1680, 630, true ); // 16/6
+  add_image_size( 'gridmag-wide-medium', 960, 360, true ); // 16/6
+  add_image_size( 'gridmag-wide-small', 640, 240, true ); // 16/6
+  add_image_size( 'gridmag-wide-tiny', 320, 120, true ); // 16/6
+
+  add_image_size( 'gridmag-card-large', 1680, 1260, true ); // 4/3
+  add_image_size( 'gridmag-card-medium', 960, 720, true ); // 4/3
+  add_image_size( 'gridmag-card-small', 640, 480, true ); // 4/3
+  add_image_size( 'gridmag-card-tiny', 320, 240, true ); // 4/3
+
 }
 endif;
 add_action( 'after_setup_theme', 'grid_mag_setup' );
