@@ -699,14 +699,17 @@ h1 a:visited, h2 a:visited, h3 a:visited {
 ## Menus
 --------------------------------------------------------------*/
 .main-navigation {
-	margin-bottom: 2.75em;
+	margin-bottom: 2.25em;
 }
 
 .main-navigation ul {
-	display: none;
+	visibility: hidden;
 	list-style: none;
+	height: auto;
+	max-height: 0;
 	margin: 0;
 	padding-left: 0;
+	transition: all ease 200ms;
 }
 
 .main-navigation li {
@@ -715,15 +718,19 @@ h1 a:visited, h2 a:visited, h3 a:visited {
 
 .main-navigation a {
 	display: block;
+	padding: .5em;
 	text-decoration: none;
 }
 
 .main-navigation ul ul {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	float: left;
 	position: absolute;
-	top: 1.5em;
+	top: 100%;
 	left: -999em;
+	width: 12em;
+	min-width: 100%;
+	max-height: none;
+	background-color: #fff;
 	z-index: 99999;
 }
 
@@ -733,15 +740,20 @@ h1 a:visited, h2 a:visited, h3 a:visited {
 }
 
 .main-navigation ul ul a {
-	width: 200px;
 }
 
 .main-navigation ul ul li {
 
 }
 
-.main-navigation li:hover > a,
-.main-navigation li.focus > a {
+.main-navigation li > a {
+	color: var(--primary-colour);
+	border: 1px solid transparent;
+}
+
+.main-navigation li > a:hover,
+.main-navigation li > a:focus {
+	border-color: var(--primary-colour);
 }
 
 .main-navigation ul ul :hover > a,
@@ -785,16 +797,27 @@ h1 a:visited, h2 a:visited, h3 a:visited {
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
+	visibility: visible;
+}
+
+.main-navigation.toggled ul {
+	max-height: 1000em;
 }
 
 @media screen and (min-width: 37.5em) {
 	.menu-toggle {
 		display: none;
 	}
-	.main-navigation ul.nav-menu {
+	.main-navigation ul {
+		visibility: visible;
+	}
+	.main-navigation > ul {
 		display: block;
 		display: flex;
 		flex-flow: row wrap;
+		max-height: none;
+	}
+	.main-navigation > ul > li {
 	}
 }
 
