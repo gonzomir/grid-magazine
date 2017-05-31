@@ -1,6 +1,6 @@
 /*
 Theme Name: Grid Magazine
-Theme URI: http://underscores.me/
+Theme URI: https://github.com/gonzomir/grid-magazine
 Author: Milen Petrinski - Gonzo
 Author URI: http://greatgonzo.net
 Description: A magazine theme using Grid Layout.
@@ -1147,6 +1147,29 @@ header[role="banner"] .site-title a {
   text-decoration: none;
 }
 
+/*--------------------------------------------------------------
+## Content info
+--------------------------------------------------------------*/
+
+footer[role="contentinfo"] {
+	padding: 1.5em 0;
+	border-top: .5em solid var(--accessory-colour);
+}
+
+footer[role="contentinfo"] > * {
+	color: var(--accessory-colour);
+}
+
+footer[role="contentinfo"] a:link,
+footer[role="contentinfo"] a:visited {
+	color: var(--accessory-colour);
+	text-decoration: underline;
+}
+
+footer[role="contentinfo"] a:hover,
+footer[role="contentinfo"] a:focus {
+	text-decoration-style: double;
+}
 
 /*--------------------------------------------------------------
 ## Layout
@@ -1157,7 +1180,8 @@ header[role="banner"] .site-title a {
   margin-right: -.75em;
 }
 
-.home.blog main > * {
+.home.blog main > *,
+.home.blog .sidebar > * {
   float: left;
   min-width: 18em;
   max-width: 100%;
@@ -1166,14 +1190,16 @@ header[role="banner"] .site-title a {
 
 @supports (display: grid) {
 
-  .home.blog main {
+  .home.blog main,
+	.home.blog .sidebar {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(18em, 1fr) ) ;
     grid-gap: 1.5em;
     margin: 0 0 1.5em;
   }
 
-  .home.blog main > * {
+  .home.blog main > *,
+	.home.blog .sidebar > * {
     min-width: 0;
     margin: 0;
   }
@@ -1261,7 +1287,6 @@ header[role="banner"] .site-title a {
 .home.blog main > .posts-navigation {
   clear: both;
 }
-
 
 /*--------------------------------------------------------------
 ## Media queries
