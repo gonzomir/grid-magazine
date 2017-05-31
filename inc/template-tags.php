@@ -123,10 +123,19 @@ function grid_mag_short_excerpt() {
 	return 15;
 }
 
+function grid_mag_trim_excerpt( $text ) {
+
+  $excerpt_length = apply_filters( 'excerpt_length', 55 );
+  $excerpt_more = apply_filters( 'excerpt_more', ' ' . '[&hellip;]' );
+  return wp_trim_words( $text, $excerpt_length, $excerpt_more );
+
+}
+
+
 function grid_mag_excerpt_length() {
 	if ( is_home() && is_front_page() ) {
 		add_filter( 'excerpt_length', 'grid_mag_short_excerpt', 999 );
-		add_filter( 'get_the_excerpt', 'wp_trim_words', 999);
+		add_filter( 'get_the_excerpt', 'grid_mag_trim_excerpt', 999);
 	}
 }
-add_action( 'parse_query', 'grid_mag_excerpt_length' );
+add_action( 'wp', 'grid_mag_excerpt_length' );
