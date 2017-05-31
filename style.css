@@ -1370,6 +1370,43 @@ header[role="banner"] .site-title a {
 
 	}
 
+	.archive main {
+		float: left;
+		width: calc(66.6667% - .75em);
+	}
+
+	.archive .sidebar {
+		float: right;
+		width: calc(33.3333% - .75em);
+		padding-top: 3.634615385em;
+	}
+
+
+	@supports (display: grid) {
+
+		.archive .site-content {
+	    display: grid;
+	    grid-template-columns: repeat(auto-fill, minmax(18em, 1fr) ) ;
+	    grid-gap: 1.5em;
+		}
+
+		.archive .site-content:before,
+		.archive .site-content:after {
+			display: none;
+		}
+
+		.archive main,
+		.archive .sidebar {
+			float: none;
+			width: auto;
+		}
+
+		.archive main {
+			grid-column: span 2;
+		}
+
+	}
+
 }
 
 /*
