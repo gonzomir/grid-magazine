@@ -1188,7 +1188,28 @@ header[role="banner"] .site-title a {
   z-index: 1;
 }
 
+.home.blog main > .post .post-thumbnail:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  opacity: .25;
+  z-index: 1;
+  transition: opacity linear 200ms;
+}
+
+.home.blog main > .post:hover .post-thumbnail:after {
+  opacity: .5;
+}
+
 .home.blog main > .post .post-thumbnail img {
+	width: auto;
+	height: auto;
+	max-width: none;
+	max-height: none;
   min-width: 100%;
   min-height: 100%;
   margin: auto;
@@ -1200,41 +1221,24 @@ header[role="banner"] .site-title a {
   padding: 0 1em 1em;
 }
 
-.home.blog main > .post.has-post-thumbnail:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: #000;
-  opacity: .2;
-  z-index: 1;
-  transition: opacity linear 200ms;
-}
-
-.home.blog main > .post.has-post-thumbnail:hover:after {
-  opacity: .3;
-}
-
 .home.blog main > .post.has-post-thumbnail,
 .home.blog main > .post.has-post-thumbnail a:link,
 .home.blog main > .post.has-post-thumbnail a:visited,
 .home.blog main > .post.has-post-thumbnail header *,
 .home.blog main > .post.has-post-thumbnail footer * {
   color: #fff;
-  text-shadow: 0 0 .1em #000;
+  text-shadow: 0 0 1px #000;
 }
 
 .home.blog main > .post.has-post-thumbnail a:hover,
 .home.blog main > .post.has-post-thumbnail a:focus {
-  color: #ddd;
-  text-shadow: 0 0 .15em #000;
+  text-shadow: 0 0 3px #000;
 }
 
 .home.blog main > .posts-navigation {
   clear: both;
 }
+
 
 /*--------------------------------------------------------------
 ## Media queries

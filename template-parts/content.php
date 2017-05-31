@@ -7,6 +7,8 @@
  * @package Grid_Magazine
  */
 
+
+global $wp_query;
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -28,23 +30,44 @@
 
 	<?php if ( has_post_thumbnail() ) : ?>
 	<a class="post-thumbnail" href="<?php the_permalink(); ?>">
-		<?php the_post_thumbnail( 'gridmag-image-big' ); ?>
+		<?php
+		$thumbnail_size = 'gridmag-image-big';
+		$sizes = '(min-width: 60em) calc( (100vw - (2.5em + (100vw - 60em) / 5) * 2) * 2 / 3 - .75em ), (min-width: 40em) calc(100vw - (1.5em + (100vw - 40em) / 20) * 2), calc(100vw - 3em)';
+		if ( is_home() && is_front_page() ) {
+			if ( $wp_query->current_post > 0 ) {
+				$thumbnail_size = 'gridmag-card-tiny';
+				$sizes = '(min-width: 60em) calc( (100vw - (2.5em + (100vw - 60em) / 5) * 2 - 3em) / 3 ), (min-width: 40em) calc( (100vw - (1.5em + (100vw - 40em) / 20) * 2 - 1.5em) / 2 ), calc(100vw - 3em)';
+			}
+			else {
+				$thumbnail_size = 'gridmag-card-small';
+				$sizes = '(min-width: 60em) calc( (100vw - (2.5em + (100vw - 60em) / 5) * 2 - 3em) / 3 * 2 + 1.5em ), (min-width: 40em) calc( 100vw - (1.5em + (100vw - 40em) / 20) * 2 ), calc(100vw - 3em)';
+			}
+		}
+		if ( is_single() ) {
+			$thumbnail_size = 'gridmag-wide-medium';
+			$sizes = '(min-width: 60em) calc( 100vw - (2.5em + (100vw - 60em) / 5) * 2) ), (min-width: 40em) calc(100vw - (1.5em + (100vw - 40em) / 20) * 2), calc(100vw - 3em)';
+		}
+		?>
+		<?php the_post_thumbnail( $thumbnail_size, array( 'sizes' => $sizes ) ); ?>
 	</a>
 	<?php endif; ?>
 
 	<div class="entry-content">
 		<?php
 			if ( is_single() ) {
+
 				the_content();
+
+				wp_link_pages( array(
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'grid-mag' ),
+					'after'  => '</div>',
+				) );
+
 			}
 			else {
 				the_excerpt();
 			}
 
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'grid-mag' ),
-				'after'  => '</div>',
-			) );
 		?>
 	</div><!-- .entry-content -->
 
