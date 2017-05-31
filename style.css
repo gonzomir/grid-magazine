@@ -953,6 +953,23 @@ h1 a:visited, h2 a:visited, h3 a:visited {
 	margin: 0 0 1.5em;
 }
 
+.entry-header .entry-meta {
+	margin-top: -1em;
+	margin-bottom: 1em;
+}
+
+.entry-footer span:after {
+	content: '; ';
+}
+
+.entry-footer span:last-child:after {
+	content: '';
+}
+
+.post-thumbnail img {
+	width: 100%;
+}
+
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
