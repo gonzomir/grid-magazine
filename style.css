@@ -678,7 +678,7 @@ h1 a:visited, h2 a:visited, h3 a:visited {
 ## Menus
 --------------------------------------------------------------*/
 .main-navigation {
-	margin-bottom: 2.25em;
+	margin-bottom: 1.25em;
 }
 
 .main-navigation ul {
@@ -1118,10 +1118,10 @@ header[role="banner"] .site-title {
   margin: 0;
   padding: 0;
   font-weight: 900;
-  /* massive */
-  font-size: 2.25em;
-  font-size: calc(2.625em + 1.625 * ((100vw - 20em) / 40));
-  line-height: 1.0588235294117647em;
+  font-size: 2.625em;
+  font-size: calc(2.625em + 1.625 * (5vw - 1em));
+  line-height: 1.142857143;
+  line-height: 3rem;
   text-transform: uppercase;
 }
 
@@ -1326,6 +1326,7 @@ footer[role="contentinfo"] a:focus {
 
   header[role="banner"] .site-title {
 	  font-size: 4.25em;
+	  line-height: 0.70588236;
   }
 
   .home.blog main > .post {
