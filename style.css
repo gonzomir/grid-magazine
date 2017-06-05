@@ -284,72 +284,84 @@ textarea {
 	line-height: 1.5;
 }
 
-/*
-*
-* Zoomable baseline grid
-* type size presets
-*
-*/
+.huge {
+  font-size: 4.25em;
+  line-height: 1.05882353;
+  margin-top: 0.35294118em;
+  margin-bottom: 0.70588236em;
+}
+
+h1, h2, .large {
+  font-size: 2.625em;
+  line-height: 1.14285714;
+  margin-top: 0.57142857em;
+  margin-bottom: 0.57142857em;
+}
+
+h3, .medium {
+  font-size: 1.625em;
+  line-height: 1.84615385;
+  margin-top: 0.92307692em;
+  margin-bottom: 0;
+}
+
+h4, h5, h6 {
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-top: 1.5em;
+  margin-bottom: 0;
+}
+
 .small {
-	/* 13px / 24px */
 	font-size: 0.8125em;
 	line-height: 1.846153846;
 }
-.normal, h4, h5, h6 {
-	/* 16px / 24px */
-	font-size: 1em;
-	line-height: 1.5;
-}
-.medium, h3 {
-	/* 18px / 24px */
-	font-size: 1.25em;
-	line-height: 1.2;
-}
-.large, h2, h1 {
-	/* 26 / 24px */
-	font-size: 1.625em;
-	line-height: 0.923076923;
-}
-.huge {
-	/* 42px / 48px */
-	font-size: 2.625em;
-	line-height: 1.142857143;
-}
-.massive {
-	/* 68px / 72px */
-	font-size: 4.25em;
-	line-height: 1.0588235294117647;
-}
-.gigantic {
-	/* 110px / 120px */
-	font-size: 6.875em;
-	line-height: 1.0909090909090908;
+
+p, ul, ol, pre, table, blockquote {
+  margin-top: 0;
+  margin-bottom: 1.5em;
 }
 
-h1, h2 {
-	margin: 0.923076923em 0 0.807692308em;
-	font-weight: 600;
+ul ul, ol ol, ul ol, ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Let's make sure all's aligned */
+hr, .hr {
+  border: 1px solid;
+  margin: -1px 0;
+}
+
+sub, sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
 }
 
 h1 {
 	font-weight: 900;
 }
 
+h2 {
+	font-weight: 600;
+}
+
 h3 {
-	margin: 0 0 1.2em;
 	font-weight: 600;
 }
 
 h4, h5, h6 {
-	margin: 0;
 	font-weight: 600;
 }
-
-p, ul, ol, dl, pre, table, blockquote {
-	margin-top: 0;
-	margin-bottom: 1.5em;
-}
-
 
 h1,
 h2,
@@ -360,44 +372,15 @@ h6 {
 	clear: both;
 }
 
-p {
-	margin-bottom: 1.5em;
-}
-
 strong {
 	font-weight: 600;
-}
-
-p, ul, ol, dl, pre, table, blockquote {
-	margin-top: 0;
-	margin-bottom: 1.5em;
 }
 
 p {
 	text-align: left;
 }
 
-strong {
-	font-weight: 600;
-}
-
-sub, sup {
-	font-size: 0.8125em;
-}
-
-sup {
-	position: relative;
-	top: -0.5em;
-	line-height: 0;
-	vertical-align: baseline;
-}
-
-sub {
-	bottom: -0.25em;
-}
-
 blockquote {
-	margin: 1.5em 0;
 	padding: 1.5em 0 1.5em 2em;
 	font-style: italic;
 }
@@ -414,15 +397,12 @@ address {
 }
 
 pre {
-	background: #eee;
-	font-family: "Courier 10 Pitch", Courier, monospace;
-	font-size: 15px;
-	font-size: 0.9375rem;
-	line-height: 1.6;
-	margin-bottom: 1.6em;
+	background: var(--accessory-colour);
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	margin-bottom: 1.5em;
 	max-width: 100%;
 	overflow: auto;
-	padding: 1.6em;
+	padding: 1.5em 1em;
 }
 
 code,
@@ -430,24 +410,23 @@ kbd,
 tt,
 var {
 	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-	font-size: 15px;
-	font-size: 0.9375rem;
 }
 
 abbr,
 acronym {
-	border-bottom: 1px dotted #666;
+	border-bottom: 1px dotted var(--accessory-colour);
 	cursor: help;
 }
 
 mark,
 ins {
-	background: #fff9c0;
-	text-decoration: none;
+	background: var(--primary-colour);
+	text-decoration: var(--main-background-colour);
 }
 
 big {
-	font-size: 125%;
+  font-size: 1.625em;
+  line-height: 1.84615385;
 }
 
 /*--------------------------------------------------------------
@@ -976,9 +955,8 @@ h1 a:visited, h2 a:visited, h3 a:visited {
 	margin: 0 0 1.5em;
 }
 
-.entry-header .entry-meta {
-	margin-top: -1em;
-	margin-bottom: 1em;
+.entry-header {
+	margin-bottom: 1.5em;
 }
 
 .entry-footer span:after {
@@ -1286,6 +1264,11 @@ footer[role="contentinfo"] a:focus {
 }
 
 .home.blog main > .posts-navigation {
+.home.blog main h2 {
+  font-size: 1.625em;
+  line-height: 0.923076923;
+  margin: 0.923076923em 0 0;
+}
   clear: both;
 }
 
@@ -1308,13 +1291,12 @@ footer[role="contentinfo"] a:focus {
     padding: 0 calc(1.5em + (100vw - 40em) / 20);
   }
 
-  h1 {
-    /* 42px / 48px */
-    margin: 1.3846153846153846em 0 0.9230769230769231em;
-    font-size: 2.625em;
-    font-weight: 900;
-    line-height: 1.1428571428571428;
-  }
+	h1 {
+	  font-size: 4.25em;
+	  line-height: 1.05882353;
+	  margin-top: 0.35294118em;
+	  margin-bottom: 0.70588236em;
+	}
 
   header[role="banner"] .site-title {
 	  font-size: 4.25em;
