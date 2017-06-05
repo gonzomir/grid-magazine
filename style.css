@@ -967,8 +967,15 @@ h1 a:visited, h2 a:visited, h3 a:visited {
 	content: '';
 }
 
+.post-thumbnail {
+	display: block;
+	margin-bottom: 1.5em;
+}
+
 .post-thumbnail img {
+	display: block;
 	width: 100%;
+	margin: 0;
 }
 
 /*--------------------------------------------------------------
@@ -1160,7 +1167,8 @@ footer[role="contentinfo"] a:focus {
 }
 
 .home.blog main > *,
-.home.blog .sidebar > * {
+.home.blog .sidebar > *,
+.single .sidebar > * {
   float: left;
   min-width: 18em;
   max-width: 100%;
@@ -1170,7 +1178,8 @@ footer[role="contentinfo"] a:focus {
 @supports (display: grid) {
 
   .home.blog main,
-	.home.blog .sidebar {
+	.home.blog .sidebar,
+	.single .sidebar {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(18em, 1fr) ) ;
     grid-gap: 1.5em;
@@ -1178,7 +1187,8 @@ footer[role="contentinfo"] a:focus {
   }
 
   .home.blog main > *,
-	.home.blog .sidebar > * {
+	.home.blog .sidebar > *,
+	.single .sidebar > * {
     min-width: 0;
     margin: 0;
   }
@@ -1263,13 +1273,29 @@ footer[role="contentinfo"] a:focus {
   text-shadow: 0 0 3px #000;
 }
 
-.home.blog main > .posts-navigation {
 .home.blog main h2 {
   font-size: 1.625em;
   line-height: 0.923076923;
   margin: 0.923076923em 0 0;
 }
+
+.posts-navigation,
+.post-navigation {
   clear: both;
+}
+
+
+.single main h1 {
+}
+
+.single main .entry-meta {
+	margin-bottom: 1.5em;
+}
+
+.single main .posted-on {
+	font-weight: 900;
+	font-size: 1.25em;
+	line-height: 1.2;
 }
 
 /*--------------------------------------------------------------
@@ -1356,8 +1382,84 @@ footer[role="contentinfo"] a:focus {
 		  grid-column: 1/3;
 		}
 
+  }
+
+	.single main > article:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+
+	.single main .entry-header {
+	}
+
+	.single main .entry-content {
+		width: calc(66.6667% - 1.5em);
+		float: right;
+	}
+
+	.single main .entry-meta {
+		width: calc(33.3333% - 1.5em);
+		margin-top: 1.5em;
+		float: left;
+	}
+
+	.single main .post-thumbnail {
+		width: 100%;
+		min-height: calc( (100vw - (1.5em + (100vw - 40) / 20) * 2) * 6/16 );
+	}
+
+	.single main .entry-meta > p {
+		position: sticky;
+		top: 1.5em;
+	}
+
+	.single main .entry-meta > p > span {
+		display: block;
+		margin-bottom: 1.5em;
+	}
+
+	.single main .entry-meta .posted-on {
+	  font-size: 2.625em;
+	  line-height: 1.14285714;
+	  margin-bottom: 0.571428571em;
+	}
+
+  @supports(display: grid){
+
+		.single main > article {
+			display: grid;
+	    grid-template-columns: 1fr 2fr;
+	    grid-auto-rows: auto;
+	    grid-gap: 1.5em;
+		}
+
+		.single main .entry-content,
+		.single main .entry-meta {
+			float: none;
+			width: auto;
+			margin: 0;
+		}
+
+		.single main .entry-header,
+		.single main .post-thumbnail {
+			grid-column: 1/3;
+		}
+
+		.single main .post-thumbnail {
+			margin-bottom: 0;
+		}
+
+		.single main .entry-footer {
+			grid-column-start: 1;
+		}
+
+		.single main .entry-content {
+			grid-column-start: 2;
+		}
 
   }
+
 
   /*
   @supports(display: grid){
@@ -1440,6 +1542,10 @@ footer[role="contentinfo"] a:focus {
 			grid-column: span 2;
 		}
 
+	}
+
+	.single main .post-thumbnail {
+		min-height: calc( (100vw - (2.5em + (100vw - 60em) / 5) * 2) * 6/16 );
 	}
 
 }
