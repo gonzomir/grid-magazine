@@ -1197,7 +1197,6 @@ footer[role="contentinfo"] a:focus {
 	  grid-column-start: 1;
 	}
 
-
 }
 
 .home.blog main > .post {
@@ -1314,7 +1313,7 @@ footer[role="contentinfo"] a:focus {
 @media screen and (min-width: 40em) {
 
   body {
-    padding: 0 calc(1.5em + (100vw - 40em) / 20);
+    padding: 0 calc(1.5em + (5vw - 2em));
   }
 
 	h1 {
@@ -1343,11 +1342,11 @@ footer[role="contentinfo"] a:focus {
   }
 
   .home.blog main > .post.has-post-thumbnail {
-    min-height: calc( (100vw - (1.5em + (100vw - 40em) / 20) * 2) / 2 );
+    min-height: calc( (100vw - (1.5em + (5vw - 2em)) * 2 - 1.5em) / 2 * .75 );
   }
 
   .home.blog main > .post.has-post-thumbnail:first-child {
-    min-height: calc( (100vw - (1.5em + (100vw - 40em) / 20) * 2) * 3 / 4 );
+    min-height: calc( (100vw - (1.5em + (5vw - 2em)) * 2) * .75 );
   }
 
   .home.blog main > .post.has-post-thumbnail:first-child .entry-content {
@@ -1357,7 +1356,7 @@ footer[role="contentinfo"] a:focus {
   @supports (display: grid) {
 
     .home.blog main {
-      /*grid-template-rows: repeat(9, calc( (100vw - (1.5em + (100vw - 40em) / 20) * 2 - 3em) / 4 ) ) ;*/
+      grid-auto-rows: calc( (100vw - (1.5em + (5vw - 2em)) * 2 - 1.5em) / 2 * .75 );
     }
 
     .home.blog main > .post {
@@ -1485,20 +1484,22 @@ footer[role="contentinfo"] a:focus {
 @media screen and (min-width: 60em) {
 
   body {
-    padding: 0 calc(2.5em + (100vw - 60em) / 5);
+    padding: 0 calc(2.5em + (20vw - 12em));
   }
 
   .home.blog main > .post.has-post-thumbnail:first-child {
-    min-height: calc( (100vw - (3.5em + (100vw - 60em) / 5) * 2) * 3 / 4 );
+    min-height: calc( (100vw - (2.5em + (20vw - 12em)) * 2) * .75 -.75em );
   }
 
   @supports(display: grid){
 
-	  .home.blog main {
-	    /*grid-template-rows: repeat(9, calc( (100vw - (2.5em + (100vw - 60em) / 5) * 2 - 3em) / 4 ) ) ;*/
-	  }
+    .home.blog main {
+      grid-auto-rows: minmax(max-content, calc( (100vw - (2.5em + (20vw - 12em)) * 2 - 3em) / 3 * .75 ));
+    }
 
-    .home.blog main > .post, .home.blog main > .post.has-post-thumbnail, .home.blog main > .post.has-post-thumbnail:first-child {
+    .home.blog main > .post,
+    .home.blog main > .post.has-post-thumbnail,
+    .home.blog main > .post.has-post-thumbnail:first-child {
       min-height: 0;
     }
 
