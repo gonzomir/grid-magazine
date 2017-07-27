@@ -16,7 +16,11 @@ get_header(); ?>
 
 			get_template_part( 'template-parts/content', 'single' );
 
-			the_post_navigation();
+			the_post_navigation( array(
+	        'prev_text'          => __( 'Previous post: <strong>%title</strong>', 'grid-mag' ),
+	        'next_text'          => __( 'Next post: <strong>%title</strong>', 'grid-mag' )
+	      )
+	    );
 
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :
