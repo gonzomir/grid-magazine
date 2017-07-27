@@ -636,6 +636,10 @@ textarea {
 	width: 100%;
 }
 
+label {
+	display: block;
+}
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -981,13 +985,81 @@ h1 a:visited, h2 a:visited, h3 a:visited {
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
+.comments-area {
+	margin-bottom: 3em;
+}
+
 .comment-content a {
 	word-wrap: break-word;
+}
+
+@supports(hyphens: auto){
+	.comment-content a {
+		word-break: normal;
+		hyphens: auto;
+	}
 }
 
 .bypostauthor {
 	display: block;
 }
+
+.bypostauthor .avatar {
+	box-shadow: 0 0 0 .2em var(--primary-colour);
+}
+
+.comment-list {
+	list-style-type: none;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+.comment-list ol {
+	padding-left: 0;
+	margin-left: 3em;
+}
+
+.comment article {
+	margin-bottom: 3em;
+}
+
+.comment-meta {
+	margin-bottom: 1.5em;
+}
+
+.avatar {
+	float: left;
+	margin: 0 1.5rem 1.5rem 0;
+}
+
+.comment-content {
+	clear: both;
+}
+
+@media all and (min-width: 40em) {
+	.avatar {
+		margin-left: calc( -1 * (96px + 1.5rem) );
+	}
+
+	.comment-content {
+		clear: none;
+	}
+
+	.comment-list ol {
+		margin-left: calc( 96px + 1.5rem );
+	}
+
+}
+
+
+.comment-form input {
+	width: 100%;
+}
+
+.comment-form *[type="submit"] {
+	width: auto;
+}
+
 
 /*--------------------------------------------------------------
 # Infinite scroll
@@ -1393,7 +1465,8 @@ footer[role="contentinfo"] a:focus {
 	.single main .entry-header {
 	}
 
-	.single main .entry-content {
+	.single main .entry-content,
+	.single main .comments-area {
 		width: calc(66.6667% - 1.5em);
 		float: right;
 	}
@@ -1427,7 +1500,8 @@ footer[role="contentinfo"] a:focus {
 
   @supports(display: grid){
 
-		.single main > article {
+		.single main > article,
+		.single main > .comments-area {
 			display: grid;
 	    grid-template-columns: 1fr 2fr;
 	    grid-auto-rows: auto;
@@ -1435,14 +1509,16 @@ footer[role="contentinfo"] a:focus {
 		}
 
 		.single main .entry-content,
-		.single main .entry-meta {
+		.single main .entry-meta,
+		.single main .comments-area {
 			float: none;
 			width: auto;
 			margin: 0;
 		}
 
 		.single main .entry-header,
-		.single main .post-thumbnail {
+		.single main .post-thumbnail,
+		.single main .comments-title {
 			grid-column: 1/3;
 		}
 
@@ -1454,7 +1530,9 @@ footer[role="contentinfo"] a:focus {
 			grid-column-start: 1;
 		}
 
-		.single main .entry-content {
+		.single main .entry-content,
+		.single main .comment-list,
+		.single main .comment-respond {
 			grid-column-start: 2;
 		}
 
