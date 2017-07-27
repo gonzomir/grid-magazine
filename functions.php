@@ -123,6 +123,9 @@ add_action( 'widgets_init', 'grid_mag_widgets_init' );
  * Enqueue scripts and styles.
  */
 function grid_mag_scripts() {
+
+	wp_enqueue_style( 'grid-mag-font-fira-sans', get_template_directory_uri() . '/fonts/fira-sans/stylesheet.css' );
+
 	wp_enqueue_style( 'grid-mag-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'grid-mag-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
