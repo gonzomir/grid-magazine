@@ -139,6 +139,16 @@ function grid_mag_scripts() {
 add_action( 'wp_enqueue_scripts', 'grid_mag_scripts' );
 
 /**
+ * Remove width and height attributes of images.
+ */
+function grid_mag_image_html( $html, $post_id, $post_image_id ) {
+  $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
+  return $html;
+}
+add_filter( 'post_thumbnail_html', 'grid_mag_image_html', 999, 3 );
+
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
