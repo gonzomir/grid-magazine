@@ -806,6 +806,7 @@ h1 a:visited, h2 a:visited, h3 a:visited {
 
 .site-main .comment-navigation,
 .site-main .posts-navigation,
+.site-main .pagination,
 .site-main .post-navigation {
 	margin: 0 0 3em;
 	overflow: hidden;
@@ -832,8 +833,23 @@ h1 a:visited, h2 a:visited, h3 a:visited {
 		width: 50%;
 	}
 
+}
 
+.pagination a,
+.pagination .current {
+	display: inline-block;
+	border: 1px solid;
+	border-color: currentColor;
+	border-radius: 3px;
+	margin: 0 .125em;
+	min-width: 2em;
+	padding: calc(.25em - 1px) .5em;
+	text-align: center;
+	text-decoration: none;
+}
 
+.pagination .current {
+	color: var(--accessory-colour);
 }
 
 /*--------------------------------------------------------------
@@ -1076,6 +1092,7 @@ h1 a:visited, h2 a:visited, h3 a:visited {
 --------------------------------------------------------------*/
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
 .infinite-scroll .posts-navigation, /* Older / Newer Posts Navigation (always hidden) */
+.infinite-scroll .pagination,  /* Posts Pagination (always hidden) */
 .infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
 	display: none;
 }
@@ -1298,8 +1315,10 @@ footer[role="contentinfo"] a:focus {
     margin: 0;
   }
 
-	.home.blog main > .posts-navigation {
-	  grid-column-start: 1;
+	.home.blog main > .posts-navigation,
+	.home.blog main > .pagination {
+	  grid-column: 1 / -1;
+	  align-self: center;
 	}
 
 }
@@ -1384,8 +1403,13 @@ footer[role="contentinfo"] a:focus {
 }
 
 .posts-navigation,
+.pagination,
 .post-navigation {
   clear: both;
+}
+
+.pagination {
+	text-align: center;
 }
 
 

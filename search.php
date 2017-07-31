@@ -31,7 +31,7 @@ get_header(); ?>
 
 		endwhile;
 
-		the_posts_navigation();
+		the_posts_pagination( array( 'mid_size' => 5 ) );
 
 	else :
 
