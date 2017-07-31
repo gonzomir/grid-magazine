@@ -1178,6 +1178,26 @@ object {
 
 
 /*--------------------------------------------------------------
+## Search form
+--------------------------------------------------------------*/
+
+.search-form {
+	display: flex;
+	align-items: stretch;
+}
+
+.search-form input[type="search"]{
+	flex: 1;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.search-form [type="submit"]{
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+/*--------------------------------------------------------------
 ## Site branding
 --------------------------------------------------------------*/
 
