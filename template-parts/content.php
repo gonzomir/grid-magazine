@@ -59,7 +59,7 @@ global $wp_query;
 				the_content();
 
 				wp_link_pages( array(
-					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'grid-mag' ),
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'grid-magazine' ),
 					'after'  => '</div>',
 				) );
 

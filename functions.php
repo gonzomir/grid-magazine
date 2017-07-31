@@ -20,9 +20,9 @@ function grid_mag_setup() {
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
 	 * If you're building a theme based on Grid Magazine, use a find and replace
-	 * to change 'grid-mag' to the name of your theme in all the template files.
+	 * to change 'grid-magazine' to the name of your theme in all the template files.
 	 */
-	load_theme_textdomain( 'grid-mag', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'grid-magazine', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -44,7 +44,7 @@ function grid_mag_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'menu-1' => esc_html__( 'Primary', 'grid-mag' ),
+		'menu-1' => esc_html__( 'Primary', 'grid-magazine' ),
 	) );
 
 	/*
@@ -108,9 +108,9 @@ add_action( 'after_setup_theme', 'grid_mag_content_width', 0 );
  */
 function grid_mag_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'grid-mag' ),
+		'name'          => esc_html__( 'Sidebar', 'grid-magazine' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'grid-mag' ),
+		'description'   => esc_html__( 'Add widgets here.', 'grid-magazine' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',

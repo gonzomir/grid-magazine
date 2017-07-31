@@ -3,12 +3,16 @@ Theme Name: Grid Magazine
 Theme URI: https://github.com/gonzomir/grid-magazine
 Author: Milen Petrinski - Gonzo
 Author URI: http://greatgonzo.net
-Description: A magazine theme using Grid Layout.
+Description: A magazine / news theme using CSS Grid Layout on the homepage.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
-Text Domain: grid-mag
-Tags:
+Text Domain: grid-magazine
+Tags: grid-layout, one-column, two-columns, right-sidebar, custom-menu, featured-images, threaded-comments, translation-ready, blog, entertainment, news
+
+Grid Magazine is a theme that uses the new Grid Layout CSS module to achieve a distinctive
+look for the homepage - a grid of posts with featured images, properly alligned into rows
+and columns.
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.

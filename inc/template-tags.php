@@ -24,10 +24,10 @@ function grid_mag_posted_on() {
 		esc_html( get_the_modified_date() )
 	);
 
-	$posted_on = '<span class="screen-reader-text">' . esc_html_x( 'Posted on', 'post date', 'grid-mag' ) . '</span>' . $time_string;
+	$posted_on = '<span class="screen-reader-text">' . esc_html_x( 'Posted on', 'post date', 'grid-magazine' ) . '</span>' . $time_string;
 
 	$byline = sprintf(
-		esc_html_x( 'by %s', 'post author', 'grid-mag' ),
+		esc_html_x( 'by %s', 'post author', 'grid-magazine' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
@@ -44,29 +44,29 @@ function grid_mag_entry_footer() {
 	// Hide category and tag text for pages.
 	if ( 'post' === get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( esc_html__( ', ', 'grid-mag' ) );
+		$categories_list = get_the_category_list( esc_html__( ', ', 'grid-magazine' ) );
 		if ( $categories_list && grid_mag_categorized_blog() ) {
-			echo '<span class="cat-links"><span class="screen-reader-text">' . esc_html__( 'Posted in', 'grid-mag' ) . '</span>' . $categories_list . '</span>'; // WPCS: XSS OK.
+			echo '<span class="cat-links"><span class="screen-reader-text">' . esc_html__( 'Posted in', 'grid-magazine' ) . '</span>' . $categories_list . '</span>'; // WPCS: XSS OK.
 		}
 
 		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'grid-mag' ) );
+		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'grid-magazine' ) );
 		if ( $tags_list ) {
-			echo '<span class="tags-links"><span class="screen-reader-text">' . esc_html__( 'Tagged', 'grid-mag' ) . '</span> ' . $tags_list . '</spam>'; // WPCS: XSS OK.
+			echo '<span class="tags-links"><span class="screen-reader-text">' . esc_html__( 'Tagged', 'grid-magazine' ) . '</span> ' . $tags_list . '</spam>'; // WPCS: XSS OK.
 		}
 	}
 
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
 		/* translators: %s: post title */
-		comments_popup_link( sprintf( wp_kses( __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'grid-mag' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
+		comments_popup_link( sprintf( wp_kses( __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'grid-magazine' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
 		echo '</span>';
 	}
 
 	edit_post_link(
 		sprintf(
 			/* translators: %s: Name of current post */
-			esc_html__( 'Edit %s', 'grid-mag' ),
+			esc_html__( 'Edit %s', 'grid-magazine' ),
 			the_title( '<span class="screen-reader-text">"', '"</span>', false )
 		),
 		'<span class="edit-link">',

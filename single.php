@@ -17,8 +17,8 @@ get_header(); ?>
 			get_template_part( 'template-parts/content', 'single' );
 
 			the_post_navigation( array(
-	        'prev_text'          => __( 'Previous post: <strong>%title</strong>', 'grid-mag' ),
-	        'next_text'          => __( 'Next post: <strong>%title</strong>', 'grid-mag' )
+	        'prev_text'          => __( 'Previous post: <strong>%title</strong>', 'grid-magazine' ),
+	        'next_text'          => __( 'Next post: <strong>%title</strong>', 'grid-magazine' )
 	      )
 	    );
 
