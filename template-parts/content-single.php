@@ -51,6 +51,8 @@ global $wp_query;
 				wp_link_pages( array(
 					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'grid-magazine' ),
 					'after'  => '</div>',
+					'link_before' => '<span>',
+					'link_after'  => '</span>',
 				) );
 
 			}
