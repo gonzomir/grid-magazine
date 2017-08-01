@@ -827,6 +827,7 @@ h1 a:visited, h2 a:visited, h3 a:visited {
 		max-height: none;
 	}
 	.main-navigation > ul > li {
+		display: inline-block;
 	}
 }
 
@@ -1040,6 +1041,7 @@ img.alignright,
 
 .post-thumbnail img {
 	display: block;
+	width: 100%;
 	margin: 0;
 }
 
@@ -1290,6 +1292,23 @@ header[role="banner"] .site-title a {
   text-decoration: none;
 }
 
+.site-branding {
+	float: left;
+}
+
+.main-navigation {
+	float: right;
+}
+
+@supports(display: flex){
+
+	.site-branding,
+	.main-navigation {
+		float: none;
+	}
+
+}
+
 /*--------------------------------------------------------------
 ## Content info
 --------------------------------------------------------------*/
@@ -1321,6 +1340,12 @@ footer[role="contentinfo"] a:focus {
 .home.blog main {
   margin-left: -.75em;
   margin-right: -.75em;
+}
+
+.home.blog .sidebar,
+.single .sidebar,
+.page .sidebar {
+	clear: both;
 }
 
 .home.blog main > *,
@@ -1444,6 +1469,8 @@ footer[role="contentinfo"] a:focus {
 .pagination,
 .post-navigation {
   clear: both;
+  float: none !important;
+  width: 100% !important;
 }
 
 .pagination {
@@ -1662,8 +1689,12 @@ footer[role="contentinfo"] a:focus {
     padding: 0 calc(2.5em + (20vw - 12em));
   }
 
-  .home.blog main > .post.has-post-thumbnail:first-child {
-    min-height: calc( (100vw - (2.5em + (20vw - 12em)) * 2) * .75 -.75em );
+  .home.blog main > .post.has-post-thumbnail {
+    min-height: calc( ( (100vw - (2.5em + (20vw - 12em)) * 2) / 3 - 1em ) * .75 );
+  }
+
+  .home.blog:not(.paged) main > .post.has-post-thumbnail:first-child {
+    min-height: calc( ( (100vw - (2.5em + (20vw - 12em)) * 2) * 2/3 - .75em ) * .75 );
   }
 
   @supports(display: grid){
