@@ -1499,7 +1499,7 @@ footer[role="contentinfo"] a:focus {
     width: calc(33.3333% - 1.5em);
   }
 
-  .home.blog main > .post:first-child {
+  .home.blog:not(.paged) main > .post.has-post-thumbnail:first-child {
     width: calc(66.6667% - 1.5em);
   }
 
@@ -1511,11 +1511,11 @@ footer[role="contentinfo"] a:focus {
     min-height: calc( (100vw - (1.5em + (5vw - 2em)) * 2 - 1.5em) / 2 * .75 );
   }
 
-  .home.blog main > .post.has-post-thumbnail:first-child {
+  .home.blog:not(.paged) main > .post.has-post-thumbnail:first-child {
     min-height: calc( (100vw - (1.5em + (5vw - 2em)) * 2) * .75 );
   }
 
-  .home.blog main > .post.has-post-thumbnail:first-child .entry-content {
+  .home.blog:not(.paged) main > .post.has-post-thumbnail:first-child .entry-content {
     margin-top: 0;
   }
 
@@ -1532,7 +1532,7 @@ footer[role="contentinfo"] a:focus {
       margin-bottom: 0;
     }
 
-    .home.blog main > .post:first-child {
+    .home.blog:not(.paged) main > .post.has-post-thumbnail:first-child {
       width: auto;
       min-height: 0;
       grid-column: span 2;
