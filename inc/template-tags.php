@@ -133,7 +133,7 @@ function grid_mag_trim_excerpt( $text ) {
 
 
 function grid_mag_excerpt_length() {
-	if ( is_home() && is_front_page() ) {
+	if ( is_home() ) {
 		add_filter( 'excerpt_length', 'grid_mag_short_excerpt', 999 );
 		add_filter( 'get_the_excerpt', 'grid_mag_trim_excerpt', 999);
 	}

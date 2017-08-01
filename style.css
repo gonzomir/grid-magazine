@@ -1338,19 +1338,19 @@ footer[role="contentinfo"] a:focus {
 ## Layout
 --------------------------------------------------------------*/
 
-.home.blog main {
+.blog main {
   margin-left: -.75em;
   margin-right: -.75em;
 }
 
-.home.blog .sidebar,
+.blog .sidebar,
 .single .sidebar,
 .page .sidebar {
 	clear: both;
 }
 
-.home.blog main > *,
-.home.blog .sidebar > *,
+.blog main > *,
+.blog .sidebar > *,
 .single .sidebar > *,
 .page .sidebar > * {
   float: left;
@@ -1359,10 +1359,15 @@ footer[role="contentinfo"] a:focus {
   margin: 0 .75em 1.5em;
 }
 
+.blog main > header {
+	float: none;
+	margin: 0;
+}
+
 @supports (display: grid) {
 
-  .home.blog main,
-	.home.blog .sidebar,
+  .blog main,
+	.blog .sidebar,
 	.single .sidebar,
 	.page .sidebar {
     display: grid;
@@ -1371,23 +1376,27 @@ footer[role="contentinfo"] a:focus {
     margin: 0 0 1.5em;
   }
 
-  .home.blog main > *,
-	.home.blog .sidebar > *,
+  .blog main > *,
+	.blog .sidebar > *,
 	.single .sidebar > *,
 	.page .sidebar > *  {
     min-width: 0;
     margin: 0;
   }
 
-	.home.blog main > .posts-navigation,
-	.home.blog main > .pagination {
+	.blog main > header {
+	  position: absolute;
+	}
+
+	.blog main > .posts-navigation,
+	.blog main > .pagination {
 	  grid-column: 1 / -1;
 	  align-self: center;
 	}
 
 }
 
-.home.blog main > .post {
+.blog main > .post {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -1396,12 +1405,12 @@ footer[role="contentinfo"] a:focus {
   box-sizing: border-box;
 }
 
-.home.blog main > .post > * {
+.blog main > .post > * {
   position: relative;
   z-index: 2;
 }
 
-.home.blog main > .post .post-thumbnail {
+.blog main > .post .post-thumbnail {
   display: block;
   position: absolute;
   top: 0;
@@ -1413,7 +1422,7 @@ footer[role="contentinfo"] a:focus {
   z-index: 1;
 }
 
-.home.blog main > .post .post-thumbnail:after {
+.blog main > .post .post-thumbnail:after {
   content: '';
   position: absolute;
   top: 0;
@@ -1426,11 +1435,11 @@ footer[role="contentinfo"] a:focus {
   transition: opacity linear 200ms;
 }
 
-.home.blog main > .post:hover .post-thumbnail:after {
+.blog main > .post:hover .post-thumbnail:after {
   opacity: .5;
 }
 
-.home.blog main > .post .post-thumbnail img {
+.blog main > .post .post-thumbnail img {
 	width: auto;
 	height: auto;
 	max-width: none;
@@ -1440,27 +1449,27 @@ footer[role="contentinfo"] a:focus {
   margin: auto;
 }
 
-.home.blog main > .post.has-post-thumbnail {
+.blog main > .post.has-post-thumbnail {
   justify-content: flex-end;
   min-height: calc( (100vw - 2em) * 3 / 4 );
   padding: 0 1em 1em;
 }
 
-.home.blog main > .post.has-post-thumbnail,
-.home.blog main > .post.has-post-thumbnail a:link,
-.home.blog main > .post.has-post-thumbnail a:visited,
-.home.blog main > .post.has-post-thumbnail header *,
-.home.blog main > .post.has-post-thumbnail footer * {
+.blog main > .post.has-post-thumbnail,
+.blog main > .post.has-post-thumbnail a:link,
+.blog main > .post.has-post-thumbnail a:visited,
+.blog main > .post.has-post-thumbnail header *,
+.blog main > .post.has-post-thumbnail footer * {
   color: #fff;
   text-shadow: 0 0 1px #000;
 }
 
-.home.blog main > .post.has-post-thumbnail a:hover,
-.home.blog main > .post.has-post-thumbnail a:focus {
+.blog main > .post.has-post-thumbnail a:hover,
+.blog main > .post.has-post-thumbnail a:focus {
   text-shadow: 0 0 3px #000;
 }
 
-.home.blog main h2 {
+.blog main h2 {
   font-size: 1.625em;
   line-height: 0.923076923;
   margin: 0.923076923em 0 0;
@@ -1523,57 +1532,57 @@ footer[role="contentinfo"] a:focus {
 	  line-height: 0.70588236;
   }
 
-  .home.blog main > .post {
+  .blog main > .post {
   	float: left;
     width: calc(33.3333% - 1.5em);
   }
 
-  .home.blog:not(.paged) main > .post.has-post-thumbnail:first-child {
+  .blog:not(.paged) main > .post.has-post-thumbnail:first-of-type {
     width: calc(66.6667% - 1.5em);
   }
 
-  .home.blog main > .post .entry-content {
+  .blog main > .post .entry-content {
     margin-top: auto;
   }
 
-  .home.blog main > .post.has-post-thumbnail {
+  .blog main > .post.has-post-thumbnail {
     min-height: calc( (100vw - (1.5em + (5vw - 2em)) * 2 - 1.5em) / 2 * .75 );
   }
 
-  .home.blog:not(.paged) main > .post.has-post-thumbnail:first-child {
+  .blog:not(.paged) main > .post.has-post-thumbnail:first-of-type {
     min-height: calc( (100vw - (1.5em + (5vw - 2em)) * 2) * .75 );
   }
 
-  .home.blog:not(.paged) main > .post.has-post-thumbnail:first-child .entry-content {
+  .blog:not(.paged) main > .post.has-post-thumbnail:first-of-type .entry-content {
     margin-top: 0;
   }
 
   @supports (display: grid) {
 
-    .home.blog main {
+    .blog main {
       grid-auto-rows: calc( (100vw - (1.5em + (5vw - 2em)) * 2 - 1.5em) / 2 * .75 );
     }
 
-    .home.blog main > .post {
+    .blog main > .post {
     	float: none;
       width: auto;
       min-height: 0;
       margin-bottom: 0;
     }
 
-    .home.blog:not(.paged) main > .post.has-post-thumbnail:first-child {
+    .blog:not(.paged) main > .post.has-post-thumbnail:first-of-type {
       width: auto;
       min-height: 0;
       grid-column: span 2;
       grid-row: span 2;
     }
 
-    .home.blog main > .post,
-    .home.blog main > .post.has-post-thumbnail {
+    .blog main > .post,
+    .blog main > .post.has-post-thumbnail {
       min-height: 0;
     }
 
-		.home.blog main > .posts-navigation {
+		.blog main > .posts-navigation {
 		  grid-column: 1/3;
 		}
 
@@ -1666,17 +1675,17 @@ footer[role="contentinfo"] a:focus {
 
   /*
   @supports(display: grid){
-    .home.blog main > .category-politics {
+    .blog main > .category-politics {
       grid-row: span 2;
     }
 
-    .home.blog main > .category-politics:nth-last-child(3),
-    .home.blog main > :nth-last-child(3) ~ .category-politics {
+    .blog main > .category-politics:nth-last-child(3),
+    .blog main > :nth-last-child(3) ~ .category-politics {
       grid-row: span 1;
     }
   }
 
-  .home.blog main > .post.category-politics:not(.has-post-thumbnail) {
+  .blog main > .post.category-politics:not(.has-post-thumbnail) {
     border: 1px solid;
     padding: 0 1em 1em;
   }
@@ -1690,27 +1699,27 @@ footer[role="contentinfo"] a:focus {
     padding: 0 calc(2.5em + (20vw - 12em));
   }
 
-  .home.blog main > .post.has-post-thumbnail {
+  .blog main > .post.has-post-thumbnail {
     min-height: calc( ( (100vw - (2.5em + (20vw - 12em)) * 2) / 3 - 1em ) * .75 );
   }
 
-  .home.blog:not(.paged) main > .post.has-post-thumbnail:first-child {
+  .blog:not(.paged) main > .post.has-post-thumbnail:first-of-type {
     min-height: calc( ( (100vw - (2.5em + (20vw - 12em)) * 2) * 2/3 - .75em ) * .75 );
   }
 
   @supports(display: grid){
 
-    .home.blog main {
+    .blog main {
       grid-auto-rows: minmax(max-content, calc( (100vw - (2.5em + (20vw - 12em)) * 2 - 3em) / 3 * .75 ));
     }
 
-    .home.blog main > .post,
-    .home.blog main > .post.has-post-thumbnail,
-    .home.blog main > .post.has-post-thumbnail:first-child {
+    .blog main > .post,
+    .blog main > .post.has-post-thumbnail,
+    .blog main > .post.has-post-thumbnail:first-of-type {
       min-height: 0;
     }
 
-		.home.blog main > .posts-navigation {
+		.blog main > .posts-navigation {
 		  grid-column: 1/4;
 		}
 
@@ -1770,20 +1779,20 @@ footer[role="contentinfo"] a:focus {
 /*
 @media all and (min-width: 65em) {
 
-  .home.blog main > .post {
+  .blog main > .post {
     min-height: calc( (100vw - (3.5em + (100vw - 60em) / 5) * 2 - 4.5em) / 4 - 1.5em );
   }
 
-  .home.blog main > .post.has-post-thumbnail {
+  .blog main > .post.has-post-thumbnail {
     min-height: calc( (100vw - (3.5em + (100vw - 60em) / 5) * 2 - 4.5em) / 4 );
   }
 
-  .home.blog main > .post.has-post-thumbnail:first-child {
+  .blog main > .post.has-post-thumbnail:first-of-type {
     min-height: calc( (100vw - (3.5em + (100vw - 60em) / 5) * 2 - 3em) / 2 );
   }
 
   @supports(display: grid){
-    .home.blog main > .post, .home.blog main > .post.has-post-thumbnail, .home.blog main > .post.has-post-thumbnail:first-child {
+    .blog main > .post, .blog main > .post.has-post-thumbnail, .blog main > .post.has-post-thumbnail:first-of-type {
       min-height: 0;
     }
   }
