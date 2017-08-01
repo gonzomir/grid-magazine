@@ -15,3 +15,127 @@ body {
 	unicode-bidi: embed;
 }
 */
+
+
+@media screen and (min-width: 37.5em) {
+
+  .comment-navigation .nav-previous,
+  .posts-navigation .nav-previous,
+  .post-navigation .nav-previous {
+    float: right;
+    text-align: right;
+  }
+
+  .comment-navigation .nav-next,
+  .posts-navigation .nav-next,
+  .post-navigation .nav-next {
+    float: left;
+    text-align: left;
+  }
+
+}
+
+.alignleft {
+  float: right;
+  margin-left: 1.5em;
+  margin-right: 0;
+}
+
+.alignright {
+  float: left;
+  margin-left: 0;
+  margin-right: 1.5em;
+}
+
+.avatar {
+  float: right;
+  margin: 0 0 1.5rem 1.5rem;
+}
+
+@media all and (min-width: 40em) {
+  .avatar {
+    margin-right: calc( -1 * (96px + 1.5rem) );
+  }
+
+  .comment-list ol {
+    margin-right: calc( 96px + 1.5rem );
+  }
+
+}
+
+
+.home.blog main > *,
+.home.blog .sidebar > *,
+.single .sidebar > *,
+.page .sidebar > * {
+  float: right;
+  margin: 0 0 1.5em .75em;
+}
+
+@supports (display: grid) {
+
+  .home.blog main > *,
+  .home.blog .sidebar > *,
+  .single .sidebar > *,
+  .page .sidebar > *  {
+    margin: 0;
+  }
+
+}
+
+@media screen and (min-width: 40em) {
+
+  .home.blog main > .post {
+    float: right;
+  }
+
+  @supports (display: grid) {
+
+    .home.blog main > .post {
+      float: none;
+    }
+
+  }
+
+  .single main .entry-content,
+  .single main .comments-area {
+    float: left;
+  }
+
+  .single main .entry-meta {
+    float: right;
+  }
+
+  @supports(display: grid){
+
+    .single main .entry-content,
+    .single main .entry-meta,
+    .single main .comments-area {
+      float: none;
+    }
+
+  }
+
+  .archive main,
+  .search main {
+    float: right;
+  }
+
+  .archive .sidebar,
+  .search .sidebar {
+    float: left;
+  }
+
+
+  @supports (display: grid) {
+
+    .archive main,
+    .archive .sidebar,
+    .search main,
+    .search .sidebar {
+      float: none;
+    }
+
+  }
+
+}
