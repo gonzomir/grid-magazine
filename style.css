@@ -1101,7 +1101,7 @@ img.alignright,
 }
 
 @media all and (min-width: 40em) {
-	.avatar {
+	.single .avatar {
 		margin-left: calc( -1 * (96px + 1.5rem) );
 	}
 
@@ -1109,6 +1109,7 @@ img.alignright,
 		clear: none;
 	}
 
+	.page .comment-content,
 	.comment-list ol {
 		margin-left: calc( 96px + 1.5rem );
 	}
