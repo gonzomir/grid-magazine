@@ -12,50 +12,6 @@
 
 @font-face {
   font-family: 'Fira Sans';
-  src: url('FiraSans-ThinItalic.eot?') format('eot'),
-       url('FiraSans-ThinItalic.woff2') format('woff2'),
-       url('FiraSans-ThinItalic.woff') format('woff'),
-       url('FiraSans-ThinItalic.otf')  format('opentype'),
-       url('FiraSans-ThinItalic.ttf')  format('truetype');
-  font-weight: 100;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Fira Sans';
-  src: url('FiraSans-Thin.eot?') format('eot'),
-       url('FiraSans-Thin.woff2') format('woff2'),
-       url('FiraSans-Thin.woff') format('woff'),
-       url('FiraSans-Thin.otf')  format('opentype'),
-       url('FiraSans-Thin.ttf')  format('truetype');
-  font-weight: 100;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Fira Sans';
-  src: url('FiraSans-ExtraLightItalic.eot?') format('eot'),
-       url('FiraSans-ExtraLightItalic.woff2') format('woff2'),
-       url('FiraSans-ExtraLightItalic.woff') format('woff'),
-       url('FiraSans-ExtraLightItalic.otf')  format('opentype'),
-       url('FiraSans-ExtraLightItalic.ttf')  format('truetype');
-  font-weight: 200;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Fira Sans';
-  src: url('FiraSans-ExtraLight.eot?') format('eot'),
-       url('FiraSans-ExtraLight.woff2') format('woff2'),
-       url('FiraSans-ExtraLight.woff') format('woff'),
-       url('FiraSans-ExtraLight.otf')  format('opentype'),
-       url('FiraSans-ExtraLight.ttf')  format('truetype');
-  font-weight: 200;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Fira Sans';
   src: url('FiraSans-LightItalic.eot?') format('eot'),
        url('FiraSans-LightItalic.woff2') format('woff2'),
        url('FiraSans-LightItalic.woff') format('woff'),
@@ -95,28 +51,6 @@
        url('FiraSans-Regular.otf')  format('opentype'),
        url('FiraSans-Regular.ttf')  format('truetype');
   font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Fira Sans';
-  src: url('FiraSans-MediumItalic.eot?') format('eot'),
-       url('FiraSans-MediumItalic.woff2') format('woff2'),
-       url('FiraSans-MediumItalic.woff') format('woff'),
-       url('FiraSans-MediumItalic.otf')  format('opentype'),
-       url('FiraSans-MediumItalic.ttf')  format('truetype');
-  font-weight: 500;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Fira Sans';
-  src: url('FiraSans-Medium.eot?') format('eot'),
-       url('FiraSans-Medium.woff2') format('woff2'),
-       url('FiraSans-Medium.woff') format('woff'),
-       url('FiraSans-Medium.otf')  format('opentype'),
-       url('FiraSans-Medium.ttf')  format('truetype');
-  font-weight: 500;
   font-style: normal;
 }
 
@@ -166,28 +100,6 @@
 
 @font-face {
   font-family: 'Fira Sans';
-  src: url('FiraSans-ExtraBoldItalic.eot?') format('eot'),
-       url('FiraSans-ExtraBoldItalic.woff2') format('woff2'),
-       url('FiraSans-ExtraBoldItalic.woff') format('woff'),
-       url('FiraSans-ExtraBoldItalic.otf')  format('opentype'),
-       url('FiraSans-ExtraBoldItalic.ttf')  format('truetype');
-  font-weight: 800;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Fira Sans';
-  src: url('FiraSans-ExtraBold.eot?') format('eot'),
-       url('FiraSans-ExtraBold.woff2') format('woff2'),
-       url('FiraSans-ExtraBold.woff') format('woff'),
-       url('FiraSans-ExtraBold.otf')  format('opentype'),
-       url('FiraSans-ExtraBold.ttf')  format('truetype');
-  font-weight: 800;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Fira Sans';
   src: url('FiraSans-HeavyItalic.eot?') format('eot'),
        url('FiraSans-HeavyItalic.woff2') format('woff2'),
        url('FiraSans-HeavyItalic.woff') format('woff'),
@@ -207,93 +119,3 @@
   font-weight: 900;
   font-style: normal;
 }
-
-/*
-@font-face {
-  font-family: 'Fira Sans';
-  src: url('FiraSans-HairItalic.eot?') format('eot'),
-       url('FiraSans-HairItalic.woff2') format('woff2'),
-       url('FiraSans-HairItalic.woff') format('woff'),
-       url('FiraSans-HairItalic.otf')  format('opentype'),
-       url('FiraSans-HairItalic.ttf')  format('truetype');
-  font-weight: 100;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Fira Sans';
-  src: url('FiraSans-Hair.eot?') format('eot'),
-       url('FiraSans-Hair.woff2') format('woff2'),
-       url('FiraSans-Hair.woff') format('woff'),
-       url('FiraSans-Hair.otf')  format('opentype'),
-       url('FiraSans-Hair.ttf')  format('truetype');
-  font-weight: 100;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Fira Sans';
-  src: url('FiraSans-BookItalic.eot?') format('eot'),
-       url('FiraSans-BookItalic.woff2') format('woff2'),
-       url('FiraSans-BookItalic.woff') format('woff'),
-       url('FiraSans-BookItalic.otf')  format('opentype'),
-       url('FiraSans-BookItalic.ttf')  format('truetype');
-  font-weight: 350;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Fira Sans';
-  src: url('FiraSans-Book.eot?') format('eot'),
-       url('FiraSans-Book.woff2') format('woff2'),
-       url('FiraSans-Book.woff') format('woff'),
-       url('FiraSans-Book.otf')  format('opentype'),
-       url('FiraSans-Book.ttf')  format('truetype');
-  font-weight: 350;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Fira Sans';
-  src: url('FiraSans-UltraItalic.eot?') format('eot'),
-       url('FiraSans-UltraItalic.woff2') format('woff2'),
-       url('FiraSans-UltraItalic.woff') format('woff'),
-       url('FiraSans-UltraItalic.otf')  format('opentype'),
-       url('FiraSans-UltraItalic.ttf')  format('truetype');
-  font-weight: 900;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Fira Sans';
-  src: url('FiraSans-UltraLightItalic.eot?') format('eot'),
-       url('FiraSans-UltraLightItalic.woff2') format('woff2'),
-       url('FiraSans-UltraLightItalic.woff') format('woff'),
-       url('FiraSans-UltraLightItalic.otf')  format('opentype'),
-       url('FiraSans-UltraLightItalic.ttf')  format('truetype');
-  font-weight: 100;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Fira Sans';
-  src: url('FiraSans-UltraLight.eot?') format('eot'),
-       url('FiraSans-UltraLight.woff2') format('woff2'),
-       url('FiraSans-UltraLight.woff') format('woff'),
-       url('FiraSans-UltraLight.otf')  format('opentype'),
-       url('FiraSans-UltraLight.ttf')  format('truetype');
-  font-weight: 100;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Fira Sans';
-  src: url('FiraSans-Ultra.eot?') format('eot'),
-       url('FiraSans-Ultra.woff2') format('woff2'),
-       url('FiraSans-Ultra.woff') format('woff'),
-       url('FiraSans-Ultra.otf')  format('opentype'),
-       url('FiraSans-Ultra.ttf')  format('truetype');
-  font-weight: 900;
-  font-style: normal;
-}
-*/
