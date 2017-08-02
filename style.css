@@ -108,7 +108,7 @@ abbr[title] {
 
 b,
 strong {
-	font-weight: bold;
+	font-weight: 600;
 }
 
 dfn {
@@ -248,7 +248,7 @@ textarea {
 }
 
 optgroup {
-	font-weight: bold;
+	font-weight: 600;
 }
 
 table {
@@ -903,7 +903,7 @@ h1 a:visited, h2 a:visited, h3 a:visited {
 	clip: auto !important;
 	color: var(--primary-colour);
 	display: block;
-	font-weight: bold;
+	font-weight: 600;
 	height: auto;
 	left: 1.5em;
 	line-height: normal;
