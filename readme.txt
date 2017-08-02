@@ -1,19 +1,17 @@
 === Grid Magazine ===
-
 Contributors: automattic
-Tags: translation-ready, custom-background, theme-options, custom-menu, post-formats, threaded-comments
-
+Tags: grid-layout, one-column, two-columns, right-sidebar, custom-menu, featured-images, threaded-comments, translation-ready, blog, entertainment, news
 Requires at least: 4.0
-Tested up to: 4.7
+Tested up to: 4.8
 Stable tag: 1.0.0
 License: GNU General Public License v2 or later
-License URI: LICENSE
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-A starter theme called Grid Magazine, or underscores.
+A magazine / news theme that uses CSS Grid Layout on the homepage.
 
 == Description ==
 
-Hi. I'm a starter theme called Grid Magazine, or underscores, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+Grid Magazine is a theme that uses the new Grid Layout CSS module to achieve a distinctive look for the homepage - a grid of posts with featured images, properly aligned into rows and columns.
 
 == Installation ==
 
@@ -25,12 +23,7 @@ Hi. I'm a starter theme called Grid Magazine, or underscores, if you like. I'm a
 
 = Does this theme support any plugins? =
 
-Grid Magazine includes support for Infinite Scroll in Jetpack.
-
-== Changelog ==
-
-= 1.0 - May 12 2015 =
-* Initial release
+Grid Magazine includes support for Infinite Scroll in Jetpack. Contact Form 7 forms work well with the theme. If your plugin doesn't work with the theme, feel free to file an isue on [GitHub](https://github.com/gonzomir/grid-magazine/issues)
 
 == Credits ==
 
