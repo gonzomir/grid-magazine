@@ -1,0 +1,126 @@
+# Copyright (C) 2017 Milen Petrinski - Gonzo
+# This file is distributed under the GNU General Public License v2 or later.
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Grid Magazine 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/gonzomir/grid-magazine/issues\n"
+"POT-Creation-Date: 2017-08-02 16:09+0300\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: Poedit 2.0.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;esc_html__;esc_html_x;_x\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: fonts\n"
+"X-Poedit-SearchPathExcluded-1: node_modules\n"
+
+#: 404.php:50
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr ""
+
+#: footer.php:18
+msgid "https://wordpress.org/"
+msgstr ""
+
+#: footer.php:18
+#, php-format
+msgid "Proudly powered by %s"
+msgstr ""
+
+#: footer.php:20
+#, php-format
+msgid "Theme: %1$s by %2$s."
+msgstr ""
+
+#: footer.php:20
+msgid "Grid Magazine"
+msgstr ""
+
+#: footer.php:20
+msgid "Milen Petrinski - Gonzo"
+msgstr ""
+
+#: functions.php:47
+msgid "Primary"
+msgstr ""
+
+#: functions.php:111
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:113
+msgid "Add widgets here."
+msgstr ""
+
+#: inc/template-tags.php:27
+msgid "Posted on"
+msgstr ""
+
+#: inc/template-tags.php:30
+#, php-format
+msgid "by %s"
+msgstr ""
+
+#: inc/template-tags.php:47 inc/template-tags.php:53
+msgid ", "
+msgstr ""
+
+#: inc/template-tags.php:49
+msgid "Posted in"
+msgstr ""
+
+#: inc/template-tags.php:55
+msgid "Tagged"
+msgstr ""
+
+#: inc/template-tags.php:62
+#, php-format
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#: inc/template-tags.php:69 template-parts/content-page.php:34
+#, php-format
+msgid "Edit %s"
+msgstr ""
+
+#: search.php:18
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: searchform.php:2
+msgid "Search for:"
+msgstr ""
+
+#: searchform.php:3
+msgid "Search &hellip;"
+msgstr ""
+
+#: searchform.php:4
+msgid "Search"
+msgstr ""
+
+#: single.php:20
+msgid "Previous post: <strong>%title</strong>"
+msgstr ""
+
+#: single.php:21
+msgid "Next post: <strong>%title</strong>"
+msgstr ""
+
+#: template-parts/content-none.php:21
+#, php-format
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-page.php:22 template-parts/content-single.php:52
+#: template-parts/content.php:62
+msgid "Pages:"
+msgstr ""
