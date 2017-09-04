@@ -987,11 +987,6 @@ img.alignright,
 }
 
 
-p.has-background {
-  padding: 1.5em 2em;
-}
-
-
 /*--------------------------------------------------------------
 # Clearings
 --------------------------------------------------------------*/
@@ -2047,4 +2042,48 @@ footer[role="contentinfo"] a:focus {
 		}
 	}
 
+}
+
+/* Paragraph block with background */
+p.has-background {
+  padding: 1.5em 2em;
+}
+
+/* Blockquote block */
+.wp-block-quote {
+	margin: 0 0 1.5em;
+	box-shadow: none;
+}
+
+.wp-block-quote footer {
+	color: var(--accessory-colour);
+	margin-top: 1.5em;
+	position: relative;
+	font-size: 1em;
+	font-style: normal;
+}
+
+.wp-block-quote.blocks-quote-style-1 {
+	border-left: none;
+	padding-left: 2em;
+}
+
+.wp-block-quote.blocks-quote-style-2 {
+	padding: 0 2em;
+}
+
+.wp-block-quote.blocks-quote-style-2 p {
+  font-size: 1.625em;
+  line-height: 1.84615385;
+}
+
+.wp-block-quote.blocks-quote-style-2 footer {
+	font-size: 1em;
+	text-align: right;
+}
+
+/* Table block */
+.wp-block-table {
+  display: table;
+  width: 100%;
 }
