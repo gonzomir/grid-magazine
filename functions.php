@@ -68,6 +68,19 @@ function grid_mag_setup() {
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
+  // Add theme support for Gutenberg features
+  add_theme_support( 'gutenberg', array(
+    'wide-images' => true,
+    'colors' => array(
+      '#222',
+      '#fefefe',
+      '#940000',
+      '#BE0000',
+      '#F00303',
+      '#555555'
+    ),
+  ) );
+
   // Add new custom image size, so later you could call it in the theme.
   add_image_size( 'gridmag-image-large', 1680, 945, true ); // 16/9
   add_image_size( 'gridmag-image-big', 960, 540, true ); // 16/6

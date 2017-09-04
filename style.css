@@ -941,11 +941,54 @@ h1 a:visited, h2 a:visited, h3 a:visited {
 	margin-right: auto;
 }
 
+.alignwide,
+.alignfull {
+	clear: both;
+	display: block;
+	max-width: 100vw;
+	margin-left: -1.5em;
+	margin-right: -1.5em;
+}
+
+@media screen and (min-width: 40em) {
+
+	.alignwide {
+		margin-left: calc( -1 * (50% + 1.5em) );
+		margin-right: 0;
+	}
+
+	.alignfull {
+		margin-left: calc( -1 * ( 1.5em + (5vw - 2em) + 50% + 1.5em) );
+		margin-right: calc( -1 * (1.5em + (5vw - 2em)) );
+	}
+
+}
+
+@media screen and (min-width: 60em) {
+
+	.alignfull {
+		margin-left: calc( -1 * ( 2.5em + (20vw - 12em) + 50% + 1.5em) );
+		margin-right: calc( -1 * (2.5em + (20vw - 12em)) );
+	}
+
+}
+
+
 img.alignleft,
 img.alignright,
 .wp-caption.alignleft,
 .wp-caption.alignright {
 	max-width: 50% !important;
+}
+
+.alignwide img,
+.alignfull img {
+	width: 100%;
+}
+
+
+p.has-background {
+  padding: 1.5em 2em;
 }
 
 
