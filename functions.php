@@ -141,6 +141,10 @@ function grid_mag_scripts() {
 
 	wp_enqueue_style( 'grid-mag-style', get_stylesheet_uri() );
 
+  if( function_exists( 'the_gutenberg_project' ) ){
+    wp_enqueue_style( 'grid-mag-gutenberg-style', get_template_directory_uri() . '/css/gutenberg.css' );
+  }
+
 	wp_enqueue_script( 'grid-mag-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'grid-mag-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
@@ -148,6 +152,7 @@ function grid_mag_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
 }
 add_action( 'wp_enqueue_scripts', 'grid_mag_scripts' );
 
