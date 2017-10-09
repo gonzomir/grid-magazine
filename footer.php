@@ -17,7 +17,7 @@
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'grid-magazine' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'grid-magazine' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'grid-magazine' ), sprintf( '<a href="https://github.com/gonzomir/grid-magazine">%s</a>', __( 'Grid Magazine', 'grid-magazine' ) ), __( 'Milen Petrinski - Gonzo', 'grid-magazine' ) ); ?>
+			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'grid-magazine' ), sprintf( '<a href="https://github.com/gonzomir/grid-magazine">%s</a>', esc_html__( 'Grid Magazine', 'grid-magazine' ) ), esc_html__( 'Milen Petrinski - Gonzo', 'grid-magazine' ) ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
