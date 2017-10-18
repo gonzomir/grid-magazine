@@ -31,20 +31,20 @@ global $wp_query;
 	<?php if ( has_post_thumbnail() ) : ?>
 	<a class="post-thumbnail" href="<?php the_permalink(); ?>">
 		<?php
-		$thumbnail_size = 'gridmag-image-big';
+		$thumbnail_size = 'grid-mag-image-big';
 		$sizes = '(min-width: 60em) calc( (100vw - (2.5em + (100vw - 60em) / 5) * 2) * 2 / 3 - .75em ), (min-width: 40em) calc(100vw - (1.5em + (100vw - 40em) / 20) * 2), calc(100vw - 3em)';
 		if ( is_home() && is_front_page() ) {
 			if ( $wp_query->current_post > 0 ) {
-				$thumbnail_size = 'gridmag-card-tiny';
+				$thumbnail_size = 'grid-mag-card-tiny';
 				$sizes = '(min-width: 60em) calc( (100vw - (2.5em + (100vw - 60em) / 5) * 2 - 3em) / 3 ), (min-width: 40em) calc( (100vw - (1.5em + (100vw - 40em) / 20) * 2 - 1.5em) / 2 ), calc(100vw - 3em)';
 			}
 			else {
-				$thumbnail_size = 'gridmag-card-small';
+				$thumbnail_size = 'grid-mag-card-small';
 				$sizes = '(min-width: 60em) calc( (100vw - (2.5em + (100vw - 60em) / 5) * 2 - 3em) / 3 * 2 + 1.5em ), (min-width: 40em) calc( 100vw - (1.5em + (100vw - 40em) / 20) * 2 ), calc(100vw - 3em)';
 			}
 		}
 		if ( is_single() ) {
-			$thumbnail_size = 'gridmag-wide-medium';
+			$thumbnail_size = 'grid-mag-wide-medium';
 			$sizes = '(min-width: 60em) calc( 100vw - (2.5em + (100vw - 60em) / 5) * 2) ), (min-width: 40em) calc(100vw - (1.5em + (100vw - 40em) / 20) * 2), calc(100vw - 3em)';
 		}
 		?>

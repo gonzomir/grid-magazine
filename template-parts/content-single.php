@@ -16,7 +16,7 @@ global $wp_query;
 	<?php if ( has_post_thumbnail() ) : ?>
 	<div class="post-thumbnail">
 		<?php
-		$thumbnail_size = 'gridmag-wide-medium';
+		$thumbnail_size = 'grid-mag-wide-medium';
 		$sizes = '(min-width: 60em) calc( 100vw - (2.5em + (100vw - 60em) / 5) * 2 ), (min-width: 40em) calc(100vw - (1.5em + (100vw - 40em) / 20) * 2), calc(100vw - 3em)';
 		?>
 		<?php the_post_thumbnail( $thumbnail_size, array( 'sizes' => $sizes ) ); ?>

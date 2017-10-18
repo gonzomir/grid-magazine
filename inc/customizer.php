@@ -21,6 +21,6 @@ add_action( 'customize_register', 'grid_mag_customize_register' );
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function grid_mag_customize_preview_js() {
-	wp_enqueue_script( 'grid_mag_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
+	wp_enqueue_script( 'grid-mag-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
 add_action( 'customize_preview_init', 'grid_mag_customize_preview_js' );
