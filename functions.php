@@ -167,11 +167,6 @@ add_filter( 'post_thumbnail_html', 'grid_mag_image_html', 999, 3 );
 
 
 /**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
-
-/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
