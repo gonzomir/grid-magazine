@@ -39,7 +39,7 @@ if ( post_password_required() ) {
 		<nav id="comment-nav-above" class="navigation comment-navigation pagination" role="navigation">
 			<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'grid-magazine' ); ?></h2>
 
-			<?php paginate_comments_links(); ?>
+			<?php the_comments_navigation(); ?>
 
 		</nav><!-- #comment-nav-above -->
 		<?php endif; // Check for comment navigation. ?>
@@ -58,7 +58,7 @@ if ( post_password_required() ) {
 		<nav id="comment-nav-below" class="navigation comment-navigation pagination" role="navigation">
 			<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'grid-magazine' ); ?></h2>
 
-			<?php paginate_comments_links(); ?>
+			<?php the_comments_navigation(); ?>
 
 		</nav><!-- #comment-nav-below -->
 		<?php
